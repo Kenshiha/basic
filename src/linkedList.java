@@ -6,10 +6,10 @@ class Node {
         this.val = val;
         this.next = null;
     }
-    Node(int val,Node next){
-        this.val = val;
-        this.next = next;
-    }
+//    Node(int val,Node next){
+//        this.val = val;
+//        this.next = next;
+//    }
 }
 
 public class linkedList {
@@ -155,7 +155,7 @@ public class linkedList {
        // list.removeAt(4);
         list.set(3,99);
         list.print();
-        //System.out.println(list.size());
+        System.out.println(list.size());
         System.out.println(list.get(0));
 
   }
