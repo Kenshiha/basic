@@ -150,10 +150,10 @@ public class linkedList {
         list.addFirst(5);
         list.addLast(15);
         list.addLast(20);
-        list.addAt(2,200);
+       // list.addAt(2,200);
         list.print();
-       // list.removeAt(4);
-        list.set(3,99);
+        list.removeAt(4);
+       // list.set(3,99);
         list.print();
         System.out.println(list.size());
         System.out.println(list.get(0));
