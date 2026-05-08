@@ -6,10 +6,10 @@ class Node {
         this.val = val;
         this.next = null;
     }
-//    Node(int val,Node next){
-//        this.val = val;
-//        this.next = next;
-//    }
+    Node(int val,Node next){
+        this.val = val;
+        this.next = next;
+    }
 }
 
 public class linkedList {
