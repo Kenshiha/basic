@@ -22,10 +22,10 @@ public class ReverseLinkedList {
 
         System.out.println("Before Reverse");
         Node before = head;
-        while (before != null){
-            System.out.print(before.val + "->");
-            before = before.next;
-        }
+//        while (before != null){
+//            System.out.print(before.val + "->");
+//            before = before.next;
+//        }
         System.out.println("null");
 
         Node rev = reverse(head);
