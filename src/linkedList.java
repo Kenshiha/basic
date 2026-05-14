@@ -54,7 +54,7 @@ public class linkedList {
       Node newNode = new Node(val);
       Node temp = head;
 
-      for(int i = 0; i < index - 1; i++){
+      for(int i = 0; i < index - 1; i++){     // 5->10->15->20->25->nul  newnode = 17 newnode.next = 20
           temp = temp.next;
       }
       newNode.next = temp.next;
@@ -150,9 +150,9 @@ public class linkedList {
         list.addFirst(5);
         list.addLast(15);
         list.addLast(20);
-       // list.addAt(2,200);
+       list.addAt(3,17);
         list.print();
-        list.removeAt(4);
+        //list.removeAt(4);
        // list.set(3,99);
         list.print();
         System.out.println(list.size());
