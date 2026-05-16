@@ -1,22 +1,18 @@
-class Node {
-    int val;
-    Node next;
-
-    Node(int val){
-        this.val = val;
-        this.next = null;
-    }
-    Node(int val,Node next){
-        this.val = val;
-        this.next = next;
-    }
-}
-
 public class linkedList {
   private Node head;
   private int size;
 
-  public linkedList(){
+    private class Node {
+        int val;
+        Node next;
+
+        Node(int val){
+            this.val = val;
+            this.next = null;
+        }
+    }
+
+    public linkedList(){
       head = null;
       size = 0;
   }
@@ -142,21 +138,63 @@ public class linkedList {
       return temp.val;
   }
 
+    public boolean contain(int val){
+        Node temp = head;
+
+        while(temp != null){
+            if(temp.val == val){
+                return true;
+            }
+            temp = temp.next;
+        }
+
+        return false;
+    }
+
+    public int indexOf(int val){
+      Node temp = head;
+      int i = 0;
+      while (temp != null){
+          if(temp.val == val){
+              return i;
+          }
+          i++;
+          temp = temp.next;
+      }
+      return -1;
+    }
+
+    public void clear(){
+      head = null;
+      size = 0;
+    }
+    public boolean isEmpty(){
+      if(head == null){
+          return true;
+      }
+      return false;
+    }
   public static void main(String[] args){
 
         linkedList list = new linkedList();
+
 
         list.addFirst(10);
         list.addFirst(5);
         list.addLast(15);
         list.addLast(20);
        list.addAt(3,17);
-        list.print();
+        //list.print();
         //list.removeAt(4);
-       // list.set(3,99);
+        //list.set(3,99);
+
         list.print();
+
         System.out.println(list.size());
         System.out.println(list.get(0));
+        System.out.println(list.isEmpty());
+
+
 
   }
 }
