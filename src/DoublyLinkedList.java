@@ -17,7 +17,7 @@ public class DoublyLinkedList {
         DoublyNode(int val,DoublyNode prev,DoublyNode next){
             this.val = val;
             this.prev = prev;
-            this.next = next;
+            //this.next = next;
         }
 
     }
