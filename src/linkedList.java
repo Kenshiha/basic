@@ -174,6 +174,23 @@ public class linkedList {
       }
       return false;
     }
+
+    public void reverse(){
+        if( head == null || head.next == null) {
+            throw new IllegalStateException();
+        }
+            Node prev = null;
+            Node curr = head;
+            while (curr != null){
+
+                Node next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+            this.head = prev;
+        }
+
   public static void main(String[] args){
 
         linkedList list = new linkedList();
@@ -187,9 +204,12 @@ public class linkedList {
         //list.print();
         //list.removeAt(4);
         //list.set(3,99);
-
+      System.out.println("Before Reverse");
         list.print();
-
+      System.out.println("Reversed List");
+        list.reverse();
+        list.print();
+       System.out.println();
         System.out.println(list.size());
         System.out.println(list.get(0));
         System.out.println(list.isEmpty());
