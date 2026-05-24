@@ -14,7 +14,6 @@ public class DynamicArray {
             grow();
         }
         arr[size++] = val;
-
     }
     //Insert at the specific index
     public void addAt(int index,int val){
