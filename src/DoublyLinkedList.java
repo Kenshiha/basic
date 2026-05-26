@@ -28,9 +28,16 @@ public class DoublyLinkedList {
 
     public void addFirst(int val){
       DoublyNode newNode = new DoublyNode(val);
-      newNode.next = head;
-      newNode.prev = null;
-      head = newNode;
+
+      if(head == null){
+          head = newNode;
+          tail = newNode;
+      }
+      else{
+          newNode.next = head;
+          head.prev = newNode;
+          head = newNode;
+      }
       size++;
     }
 
