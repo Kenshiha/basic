@@ -19,11 +19,24 @@ public class DoublyLinkedList {
             this.prev = prev;
             this.next = next;
         }
-
+    }
+    public DoublyLinkedList(){
+      head = null;
+      tail = null;
+      size = 0;
     }
 
-    public static void main(String[] args){
+    public void addFirst(int val){
+      DoublyNode newNode = new DoublyNode(val);
+      newNode.next = head;
+      newNode.prev = null;
+      head = newNode;
+      size++;
+    }
 
+
+
+    public static void main(String[] args){
 
     }
 
