@@ -45,6 +45,9 @@ public class DoublyLinkedList {
 
     public static void main(String[] args){
 
+      DoublyLinkedList list = new DoublyLinkedList();
+
+      list.addFirst(10);
     }
 
 }
