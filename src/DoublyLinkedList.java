@@ -72,17 +72,8 @@ public class DoublyLinkedList {
       }
       size++;
     }
-    public void print(){
-      DoublyNode temp = head;
-
-      while(temp != null){
-          System.out.print(temp.val + "->");
-          temp = temp.next;
-      }
-        System.out.println("null");
-    }
     public void removeFirst(){
-      if(head == null){
+      if(head == null && tail == null){
           System.out.println("List is empty");
       }
       else{
@@ -91,19 +82,88 @@ public class DoublyLinkedList {
           size--;
       }
     }
+    public void removeLast(){
+      if(tail == null && head == null){
+          System.out.println("List is Empty");
+      }
+      else{
+          tail = tail.prev;
+          tail.next = null;
+          size--;
+      }
+    }
+    public void removeAt(int index){             //10->20->30->40->50->null
+      if(index < 0 || index >= size){
+          throw new IndexOutOfBoundsException();
+      }
+      if(index == size - 1){
+          removeLast();
+      }
+      if(index == 0){
+          removeFirst();
+      }
+      DoublyNode temp = head;
+      for(int i = 0;i < index - 1;i++){
+       temp = temp.next;
+      }
+      temp.next.next.prev = temp;
+      temp.next = temp.next.next;
+      size--;
+    }
+    public void print(){
+        DoublyNode temp = head;
+
+        System.out.print("null<->");
+        while(temp != null){
+            System.out.print(temp.val + "<->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
     public int size(){
       return size;
+    }
+
+    public void reverse(){
+        if(head == null || head.next == null){
+            throw new IllegalStateException();
+        }
+
+        DoublyNode prev = null;     //null<-10-><-20-><-30->null
+        DoublyNode temp = head;
+        while (temp != null){
+
+            prev = temp.prev;
+            temp.prev = temp.next;
+            temp.next = prev;
+
+            temp = temp.prev;
+        }
+        this.head = prev.prev;
+    }
+    public void reversePrint(){
+        DoublyNode temp = tail;
+        System.out.print("null<->");
+        while (temp != null){
+            System.out.print(temp.val + "<->");
+            temp = temp.prev;
+        }
+        System.out.println("null");
     }
     public static void main(String[] args){
 
       DoublyLinkedList list = new DoublyLinkedList();
 
+      list.addFirst(20);
       list.addFirst(10);
       list.addLast(90);
-      list.addAt(1,20);
-      list.removeFirst();
+      list.addAt(2,30);
+      //list.removeAt(2);
+      list.reverse();
+     // list.reversePrint();
       list.print();
       System.out.println(list.size());
+        System.out.println(list.head.val);
     }
 
 }
