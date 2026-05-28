@@ -200,7 +200,7 @@ public class linkedList {
         list.addFirst(5);
         list.addLast(15);
         list.addLast(20);
-       list.addAt(3,17);
+       list.addAt(1,17);
         //list.print();
         //list.removeAt(4);
         //list.set(3,99);
