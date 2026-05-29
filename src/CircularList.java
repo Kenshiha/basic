@@ -78,8 +78,29 @@ public class CircularList {
         }
         size--;
     }
+    public void print(){
+        Node temp = head;
+        while(temp != tail){
+            System.out.print(temp.val + "->");
+            temp = temp.next;
+        }
+        System.out.print(tail.val);
+        System.out.println();
+
+    }
 
     public static void main(String[] args){
         CircularList list = new CircularList();
+
+        list.addFirst(30);
+        list.addFirst(20);
+        list.addFirst(10);
+        list.addLast(70);
+        list.addLast(80);
+        list.addLast(90);
+        list.print();
+        list.removeFirst();
+        list.removeLast();
+        list.print();
     }
 }
