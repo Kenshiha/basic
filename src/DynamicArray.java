@@ -160,16 +160,17 @@ public class DynamicArray {
         nums.add(40);
         nums.add(50);
         nums.display();
-        nums.remove();
+       // nums.remove();
         nums.display();
 
-        int x = nums.get(1);
+       // int x = nums.get(1);
 
-        System.out.println(x);
-        System.out.println(nums.size());
+        //System.out.println(x);
+        //System.out.println(nums.size());
         System.out.println(nums.isEmpty());
 
         System.out.println(nums);
+
 
     }
 }
