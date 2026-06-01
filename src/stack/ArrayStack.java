@@ -11,7 +11,7 @@ public class ArrayStack {
          top = -1;
     }
 
-    public void add(int val){
+    public void push(int val){
         if( top == capacity - 1){
             throw new IndexOutOfBoundsException("Stack Overflow");
             //System.out.println("Stack Overflow");
@@ -24,6 +24,12 @@ public class ArrayStack {
         }
         top--;
     }
+    public void peep(){
+        if(top == -1){
+            throw new IndexOutOfBoundsException("Stack is Empty");
+        }
+        System.out.println(arr[top]);
+    }
 
     public void display(){
         for(int i = 0; i <= top; i++){
@@ -35,12 +41,13 @@ public class ArrayStack {
     public static void main(String[] args){
             ArrayStack list = new ArrayStack(5);
 
-            list.add(10);
-            list.add(20);
-            list.add(30);
-            list.add(40);
-            list.add(50);
+            list.push(10);
+            list.push(20);
+            list.push(30);
+            list.push(40);
+            list.push(50);
             list.pop();
+            list.peep();
 
             list.display();
 
