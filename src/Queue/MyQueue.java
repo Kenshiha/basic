@@ -53,8 +53,6 @@ public class MyQueue {
             first++;
         }
     }
-
-
     public static void main(String[] args){
 
         MyQueue list = new MyQueue(5);

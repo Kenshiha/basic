@@ -81,7 +81,7 @@ public class LinkedListQueue {
         list.dequeue();
         list.print();
         list.peek();
-        System.out.println(list.size);
+        System.out.println(list.size());
         System.out.println(list.isEmpty());
     }
 
