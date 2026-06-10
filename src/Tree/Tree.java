@@ -18,6 +18,9 @@ public class Tree {
 
     Tree(){
 
-        this.root = null;
+    }
+
+    public static void main(String[] args){
+
     }
 }
