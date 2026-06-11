@@ -43,6 +43,10 @@ public class LinkedStack {
         size--;
     }
 
+    public int size(){
+        return size;
+    }
+
     public void print(){
         Node temp = top;
 
@@ -65,5 +69,7 @@ public class LinkedStack {
         list.print();
         list.peek();
 
+        int r = list.size();
+        System.out.println(r);
     }
 }
