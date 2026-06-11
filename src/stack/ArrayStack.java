@@ -1,5 +1,7 @@
 package stack;
 
+// Array based stack
+
 public class ArrayStack {
     private int[] arr;
     private int capacity;
