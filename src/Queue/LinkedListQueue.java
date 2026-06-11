@@ -1,5 +1,7 @@
 package Queue;
 
+// Linked list base Queue
+
 public class LinkedListQueue {
         private Node first;
         private Node rear;

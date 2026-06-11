@@ -1,5 +1,7 @@
 package Queue;
 
+// Array based queue
+
 public class MyQueue {
     private int[] arr;
     private int capacity;
