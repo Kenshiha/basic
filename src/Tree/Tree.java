@@ -9,11 +9,11 @@ public class Tree {
         TreeNode left;
         TreeNode right;
 
-//        TreeNode(int val){
-//            this.val = val;
-//            this.left = null;
-//            this.right = null;
-//        }
+        TreeNode(int val){
+            this.val = val;
+            this.left = null;
+            this.right = null;
+        }
     }
 
     Tree(){
