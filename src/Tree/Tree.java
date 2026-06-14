@@ -1,8 +1,8 @@
 package Tree;
 
 public class Tree {
-    private int val;
-    TreeNode root;
+   private  TreeNode root;
+   private int size;
 
     private class TreeNode{
         int val;
@@ -17,7 +17,8 @@ public class Tree {
     }
 
     Tree(){
-
+        root = null;
+        size = 0;
     }
 
     public static void main(String[] args){
