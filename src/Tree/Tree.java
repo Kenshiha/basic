@@ -21,6 +21,10 @@ public class Tree {
         size = 0;
     }
 
+    public void insert(int val){
+
+    }
+
     public static void main(String[] args){
 
     }
