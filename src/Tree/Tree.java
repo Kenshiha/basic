@@ -22,7 +22,10 @@ public class Tree {
     }
 
     public void insert(int val){
+           // so the insert logic will go here
+           // FIRST WE have to take the value
 
+        TreeNode newRoot = new TreeNode(val);
     }
 
     public static void main(String[] args){
