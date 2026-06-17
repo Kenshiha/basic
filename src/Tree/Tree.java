@@ -21,30 +21,19 @@ public class Tree {
         size = 0;
     }
 
-    public void insert(int val){
 
-        TreeNode newRoot = new TreeNode(val);
 
-        if(root == null){
-            root = newRoot;
-        }
 
-        if(root.val < newRoot.val){
-            root.left = newRoot;
-        }else{
-            root.right = newRoot;
-        }
-
-        size++;
-    }
 
     public static void main(String[] args){
 
         Tree myTree = new Tree();
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
-        myTree.insert(5);
-        myTree.insert(3);
-        myTree.insert(6);
 
     }
 }
