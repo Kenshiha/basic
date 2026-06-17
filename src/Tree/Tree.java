@@ -4,7 +4,7 @@ public class Tree {
    private  TreeNode root;
    private int size;
 
-    private class TreeNode{
+    public static class TreeNode{
         int val;
         TreeNode left;
         TreeNode right;
@@ -22,15 +22,29 @@ public class Tree {
     }
 
     public void insert(int val){
-           // so the insert logic will go here
-           // FIRST WE have to take the value
 
         TreeNode newRoot = new TreeNode(val);
+
+        if(root == null){
+            root = newRoot;
+        }
+
+        if(root.val < newRoot.val){
+            root.left = newRoot;
+        }else{
+            root.right = newRoot;
+        }
+
+        size++;
     }
 
     public static void main(String[] args){
 
         Tree myTree = new Tree();
+
+        myTree.insert(5);
+        myTree.insert(3);
+        myTree.insert(6);
 
     }
 }
