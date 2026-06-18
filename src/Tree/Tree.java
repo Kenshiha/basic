@@ -3,6 +3,7 @@ package Tree;
 public class Tree {
    private  TreeNode root;
    private int size;
+   private int loop;
 
     public static class TreeNode{
         int val;
@@ -19,18 +20,42 @@ public class Tree {
     Tree(){
         root = null;
         size = 0;
+        loop= 1;
+    }
+    public void inorder(TreeNode root){
+
+        if(root == null){
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.val + " ");
+        inorder(root.right);
+
+       // System.out.println("Iteration = " + loop++);
+
+        //System.out.println();
     }
 
-    public static void inorder(TreeNode root){
+    public void preOrder(TreeNode root){
 
         if(root == null){
             return;
         }
 
-        inorder(root.left);
         System.out.print(root.val + " ");
-        inorder(root.right);
+        preOrder(root.left);
+        preOrder(root.right);
+       // System.out.println();
+    }
 
+    public  void postOrder(TreeNode root){
+        if(root == null){
+            return;
+        }
+
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.val + " ");
     }
 
     public static void main(String[] args){
@@ -43,6 +68,9 @@ public class Tree {
         root.left.right = new TreeNode(5);
 
         myTree.inorder(root);
+       // myTree.preOrder(root);
+       // myTree.postOrder(root);
+
 
     }
 }
