@@ -21,9 +21,17 @@ public class Tree {
         size = 0;
     }
 
+    public static void inorder(TreeNode root){
 
+        if(root == null){
+            return;
+        }
 
+        inorder(root.left);
+        System.out.print(root.val + " ");
+        inorder(root.right);
 
+    }
 
     public static void main(String[] args){
 
@@ -34,6 +42,7 @@ public class Tree {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
+        myTree.inorder(root);
 
     }
 }
