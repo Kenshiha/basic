@@ -68,8 +68,8 @@ public class Tree {
         root.left.right = new TreeNode(5);
 
         myTree.inorder(root);
-       // myTree.preOrder(root);
-       // myTree.postOrder(root);
+        myTree.preOrder(root);
+        myTree.postOrder(root);
 
 
     }
