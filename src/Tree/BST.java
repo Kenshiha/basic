@@ -26,12 +26,29 @@ public class BST {
 
         if(root == null){
             root = newNode;
+        } else if (root.val >= newNode.val) {
+            root.left = newNode;
         }
+    }
+
+    public void display(TreeNode root){
+        if(root == null){
+            return;
+        }
+
+        display(root.left);
+        System.out.print(root.val + " ");
+        display(root.right);
     }
 
     public static void main(String[] args){
 
-        Tree myTree = new Tree();
+        BST myTree = new BST();
+
+        myTree.insert(5);
+        myTree.insert(4);
+        myTree.insert(3);
+        myTree.display(myTree.root);
 
     }
 }
