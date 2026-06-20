@@ -20,7 +20,18 @@ public class BST {
         size = 0;
     }
 
+    public void insert(int val){
+        //logic for inserting value into tree
+        TreeNode newNode = new TreeNode(val);
+
+        if(root == null){
+            root = newNode;
+        }
+    }
+
     public static void main(String[] args){
+
+        Tree myTree = new Tree();
 
     }
 }
