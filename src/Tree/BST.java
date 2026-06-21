@@ -26,9 +26,15 @@ public class BST {
 
         if(root == null){
             root = newNode;
+            return;
         } else if (root.val >= newNode.val) {
             root.left = newNode;
         }
+
+
+        //not working recurseively , need to find something
+        //logic
+
     }
 
     public void display(TreeNode root){
@@ -45,10 +51,10 @@ public class BST {
 
         BST myTree = new BST();
 
-        myTree.insert(5);
-        myTree.insert(4);
-        myTree.insert(3);
-        myTree.display(myTree.root);
+//        myTree.insert(5);
+//        myTree.insert(4);
+//        myTree.insert(3);
+//        myTree.display(myTree.root);
 
     }
 }
