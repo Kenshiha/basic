@@ -1,5 +1,7 @@
 package Tree;
 
+import jdk.dynalink.linker.LinkerServices;
+
 public class BST {
     private TreeNode root;
     private int size;
@@ -21,17 +23,23 @@ public class BST {
     }
 
     public void insert(int val){
-        //logic for inserting value into tree
-        TreeNode newNode = new TreeNode(val);
+        root = insert(root, val);
+    }
 
-        if(root == null){
-            root = newNode;
-            return;
-        } else if (root.val >= newNode.val) {
-            root.left = newNode;
+    private TreeNode insert(TreeNode node,int val){
+        if(node == null){
+            size++;
+            return new TreeNode(val);
         }
 
+        if(val < node.val){
+            node.left = insert(node.left, val);
+        }else if(val > node.val){
+            node.right = insert(node.right,val);
+        }
+        return node;
     }
+
 
     public void display(TreeNode root){
         if(root == null){
@@ -47,10 +55,14 @@ public class BST {
 
         BST myTree = new BST();
 
-//        myTree.insert(5);
-//        myTree.insert(4);
-//        myTree.insert(3);
-//        myTree.display(myTree.root);
+        myTree.insert(10);
+        myTree.insert(5);
+        myTree.insert(3);
+        myTree.insert(15);
+        myTree.insert(12);
+        myTree.insert(20);
+        myTree.insert(7);
+        myTree.display(myTree.root);
 
     }
 }
