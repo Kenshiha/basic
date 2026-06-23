@@ -31,10 +31,6 @@ public class BST {
             root.left = newNode;
         }
 
-
-        //not working recurseively , need to find something
-        //logic
-
     }
 
     public void display(TreeNode root){
