@@ -25,6 +25,7 @@ public class BST {
     public void insert(int val){
         root = insert(root, val);
     }
+//nothing
 
     private TreeNode insert(TreeNode node,int val){
         if(node == null){
@@ -62,6 +63,7 @@ public class BST {
         myTree.insert(12);
         myTree.insert(20);
         myTree.insert(7);
+        myTree.insert(12);
         myTree.display(myTree.root);
 
     }
