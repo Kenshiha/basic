@@ -25,7 +25,6 @@ public class BST {
     public void insert(int val){
         root = insert(root, val);
     }
-//nothing
 
     private TreeNode insert(TreeNode node,int val){
         if(node == null){
@@ -41,6 +40,9 @@ public class BST {
         return node;
     }
 
+    public void remove(){
+
+    }
 
     public void display(TreeNode root){
         if(root == null){
