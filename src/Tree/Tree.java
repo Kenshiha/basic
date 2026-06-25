@@ -16,7 +16,6 @@ public class Tree {
             this.right = null;
         }
     }
-    //nothing
 
     Tree(){
         root = null;
