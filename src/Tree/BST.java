@@ -40,6 +40,47 @@ public class BST {
         return node;
     }
 
+    public void delete(int val){
+        root = delete(root, val);
+    }
+
+    private TreeNode delete(TreeNode node, int val){
+        if(node == null){
+            return null;
+        }
+
+        if( val < node.val){
+            node.left = delete(node.left, val);
+        } else if (val > node.val) {
+            node.right = delete(node.right, val);
+        } else{
+            // if no left child
+            if(node.left == null){
+                return node.right;
+            }
+
+            // if no right child
+            if(node.right == null){
+                return node.left;
+            }
+
+            // if two children
+            TreeNode successor = findMin(node.right);
+            node.val = successor.val;
+            node.right = delete(node.right , successor.val);
+        }
+
+        return node;
+    }
+
+    private TreeNode findMin(TreeNode node){
+
+        while(node.left != null){
+            node = node.left;
+        }
+        return node;
+    }
+
     public void remove(){
 
     }
@@ -66,6 +107,7 @@ public class BST {
         myTree.insert(20);
         myTree.insert(7);
         myTree.insert(12);
+        myTree.delete(15);
         myTree.display(myTree.root);
 
     }
