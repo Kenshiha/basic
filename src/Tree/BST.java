@@ -49,41 +49,36 @@ public class BST {
             return null;
         }
 
-        if( val < node.val){
-            node.left = delete(node.left, val);
+        if(val < node.val){
+            node.left = delete(node.left,val);
         } else if (val > node.val) {
             node.right = delete(node.right, val);
         } else{
-            // if no left child
+
             if(node.left == null){
+                size--;
                 return node.right;
             }
-
-            // if no right child
             if(node.right == null){
+                size--;
                 return node.left;
             }
 
-            // if two children
             TreeNode successor = findMin(node.right);
             node.val = successor.val;
-            node.right = delete(node.right , successor.val);
+            node.right = delete(node.right,s.val);
         }
 
         return node;
     }
 
     private TreeNode findMin(TreeNode node){
-
         while(node.left != null){
             node = node.left;
         }
         return node;
     }
 
-    public void remove(){
-
-    }
 
     public void display(TreeNode root){
         if(root == null){
