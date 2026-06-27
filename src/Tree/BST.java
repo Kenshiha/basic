@@ -1,7 +1,5 @@
 package Tree;
 
-import jdk.dynalink.linker.LinkerServices;
-
 public class BST {
     private TreeNode root;
     private int size;
@@ -26,15 +24,15 @@ public class BST {
         root = insert(root, val);
     }
 
-    private TreeNode insert(TreeNode node,int val){
+    private TreeNode insert(TreeNode node, int val){
         if(node == null){
             size++;
             return new TreeNode(val);
         }
 
         if(val < node.val){
-            node.left = insert(node.left, val);
-        }else if(val > node.val){
+            node.left = insert(node.left,val);
+        } else if (val > node.val) {
             node.right = insert(node.right,val);
         }
         return node;
@@ -66,7 +64,7 @@ public class BST {
 
             TreeNode successor = findMin(node.right);
             node.val = successor.val;
-            node.right = delete(node.right,s.val);
+            node.right = delete(node.right, successor.val);
         }
 
         return node;
