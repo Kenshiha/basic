@@ -77,6 +77,8 @@ public class BST {
         return node;
     }
 
+    //new method
+
 
     public void display(TreeNode root){
         if(root == null){
