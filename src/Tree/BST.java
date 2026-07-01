@@ -108,8 +108,61 @@ public class BST {
         display(root.right);
     }
 
-    public static void main(String[] args){
+    public int height(){
+        return height(root);
+    }
 
+    private int height(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    public int findMin(){
+        TreeNode curr = root;
+
+        while(curr.left != null){
+            curr = curr.left;
+        }
+        return curr.val;
+    }
+    public int findMax(){
+        TreeNode curr = root;
+
+        while(curr.right != null){
+            curr = curr.right;
+        }
+        return curr.val;
+    }
+    public int count(){
+        return count(root);
+    }
+    private int count(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        return 1 + count(node.left) + count(node.right);
+    }
+    public boolean isBalanced(){
+            return isBalanced(root);
+    }
+    private boolean isBalanced(TreeNode node){
+        if(node == null){
+            return true;
+        }
+
+        int leftHeight = height(node.left);
+        int rightHeight = height(node.right);
+
+        if(Math.abs(leftHeight - rightHeight) > 1){
+            return false;
+        }
+
+        return isBalanced(node.left) && isBalanced(node.right);
+    }
+
+    public static void main(String[] args){
         BST myTree = new BST();
 
         myTree.insert(10);
@@ -122,7 +175,9 @@ public class BST {
         myTree.insert(12);
         myTree.delete(15);
         myTree.display(myTree.root);
-
+        System.out.println();
+        System.out.println(myTree.height());
         System.out.println(search(15));
+        System.out.println(myTree.count());
     }
 }
