@@ -1,7 +1,7 @@
 package Tree;
 
 public class BST {
-    private TreeNode root;
+    private static TreeNode root;
     private int size;
 
     private class TreeNode{
@@ -77,7 +77,25 @@ public class BST {
         return node;
     }
 
-    //new method
+    //new method search BST
+
+    public static boolean search(int val){
+           return search(root, val);
+    }
+
+    private static boolean search(TreeNode node, int val){
+        if (node == null)
+            return false;
+
+        if (node.val == val)
+            return true;
+
+        if (val < node.val)
+            return search(node.left, val);
+
+        return search(node.right, val);
+
+    }
 
 
     public void display(TreeNode root){
@@ -105,5 +123,6 @@ public class BST {
         myTree.delete(15);
         myTree.display(myTree.root);
 
+        System.out.println(search(15));
     }
 }
