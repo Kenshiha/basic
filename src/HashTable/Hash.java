@@ -60,6 +60,28 @@ public class Hash {
             return null;
 
         }
+        void remove(String key){
+            int index = getIndex(key);
+            Node temp = table[index];
+            Node prev = null;
+
+            while(temp != null){
+
+                if(temp.key.equals(key)){
+                    if(prev == null){
+                        table[index] = temp.next;
+                    }else{
+                        prev.next = temp.next;
+                    }
+                    return;
+                }
+                prev = temp;
+                temp = temp.next;
+
+            }
+        }
+
+
 
         public static void main(String[] args){
 
