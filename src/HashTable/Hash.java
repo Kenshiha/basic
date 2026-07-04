@@ -77,14 +77,22 @@ public class Hash {
                 }
                 prev = temp;
                 temp = temp.next;
-
             }
         }
 
+        public void display(){
 
+    }
 
         public static void main(String[] args){
+            Hash myMap = new Hash();
 
+            myMap.put("apple", 10);
+            myMap.put("banana",20);
+            myMap.put("c",30);
+            myMap.put("d",40);
+            myMap.remove("c");
+            System.out.println(myMap.get("d"));
         }
 
 }
