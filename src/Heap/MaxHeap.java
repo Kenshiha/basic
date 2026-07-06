@@ -39,15 +39,58 @@ public class MaxHeap {
         }
     }
 
-    void delete(){
+    public int deleteMax(){
+        int n = heap.length;
+        if(n <= 0 ){
+            return -1;
+        }
+        int root = heap[0];
 
+        heap[0] = heap[n-1];
+        size--;
+
+        heapifyDown(heap, size--, 0);
+
+        return root;
+    }
+
+    void buildHeap(int[] heap){
+        int n = heap.length;
+
+        for(int i = (n/2) - 1;i > 0; i--){
+            heapifyDown(heap, n, i);
+        }
+    }
+
+    void heapSort(){
+        int n = heap.length;
+
+        for(int i = (n/2) - 1; i > 0; i--){
+            heapifyDown(heap,n,i);
+        }
+
+        for (int i = n-1; i >= 0; i--){}
     }
 
     private void heapifyDown(int[] heap,int n,int i){
+            int largest = i;
+            int left = 2 * i + 1;
+            int right = 2 * i + 2;
 
+            if(left < n && heap[left] > heap[largest]){
+                largest = left;
+            }
+            if(right < n && heap[right] > heap[largest]){
+                largest = right;
+            }
+            if(largest != i){
+                int temp = heap[i];
+                heap[i] = heap[largest];
+                heap[largest] = temp;
+
+                heapifyDown(heap, n, largest);
+            }
     }
-
-    private void heapify
 
     public void display(){
         for(int i = 0;i <= size - 1; i++){
