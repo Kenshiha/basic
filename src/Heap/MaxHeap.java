@@ -21,12 +21,11 @@ public class MaxHeap {
         if(size >= capacity){
             throw new IndexOutOfBoundsException();
         }
-
         heap[size++] = val;
-        heapify();
+        createHeap();
     }
 
-    private void heapify(){
+    private void createHeap(){
         int i = size - 1;
 
         while ( i > 0 && heap[i] > heap[(i-1)/2]){
@@ -39,6 +38,16 @@ public class MaxHeap {
             i = parent;
         }
     }
+
+    void delete(){
+
+    }
+
+    private void heapifyDown(int[] heap,int n,int i){
+
+    }
+
+    private void heapify
 
     public void display(){
         for(int i = 0;i <= size - 1; i++){
