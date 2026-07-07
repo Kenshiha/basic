@@ -40,16 +40,14 @@ public class MaxHeap {
     }
 
     public int deleteMax(){
-        int n = heap.length;
-        if(n <= 0 ){
+        if(size <= 0 ){
             return -1;
         }
         int root = heap[0];
-
-        heap[0] = heap[n-1];
+        heap[0] = heap[size-1];
         size--;
 
-        heapifyDown(heap, size--, 0);
+        heapifyDown(heap, size, 0);
 
         return root;
     }
@@ -57,19 +55,27 @@ public class MaxHeap {
     void buildHeap(int[] heap){
         int n = heap.length;
 
-        for(int i = (n/2) - 1;i > 0; i--){
+        for(int i = (n/2) - 1;i >= 0; i--){
             heapifyDown(heap, n, i);
         }
     }
 
     void heapSort(){
-        int n = heap.length;
-
-        for(int i = (n/2) - 1; i > 0; i--){
-            heapifyDown(heap,n,i);
+        if(size <= 0){
+            return;
         }
+        while (size != 0) {
+            swap(heap,0,size - 1 );
+            size--;
 
-        for (int i = n-1; i >= 0; i--){}
+            heapifyDown(heap, size, 0);
+        }
+    }
+
+    private void swap(int[] heap,int i, int j){
+        int temp = heap[i];
+        heap[i] = heap[j];
+        heap[j] = temp;
     }
 
     private void heapifyDown(int[] heap,int n,int i){
