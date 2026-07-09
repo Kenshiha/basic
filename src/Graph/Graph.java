@@ -76,5 +76,7 @@ public class Graph {
         g.printGraph();
         boolean[] visited = new boolean[g.graph.size()];
         g.dfs(0,visited);
+        System.out.println(" ");
+        g.bfs(0);
     }
 }
