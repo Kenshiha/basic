@@ -91,7 +91,7 @@ public class Trie {
 
     boolean isEmpty(TrieNode node){
         for(TrieNode child : node.children){
-            if(child ! =null){
+            if(child != null){
                 return false;
             }
         }
