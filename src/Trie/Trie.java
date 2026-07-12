@@ -103,6 +103,8 @@ public class Trie {
 
         t.insert("cat");
         t.insert("car");
+        t.insert("ca");
+        t.delete("ca");
         System.out.println(t.search("cat"));
         System.out.println(t.startWith("c"));
     }
