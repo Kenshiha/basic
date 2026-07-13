@@ -60,7 +60,7 @@ public class Trie {
         }
         return true;
     }
-    // hell awaits
+
     void delete(String word){
         delete(root,word,0);
     }
