@@ -1,5 +1,8 @@
 package Graph;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class GraphAM {
     int[][] graph;
 
@@ -27,6 +30,38 @@ public class GraphAM {
             }
          }
 
+         void dfs(int vertex, boolean[] visited){
+                visited[vertex] = true;
+                System.out.print(vertex + " ");
+
+                for(int i = 0; i< graph.length; i++){
+                    if(graph[vertex][i] == 1 && !visited[i]){
+                        dfs(i,visited);
+                    }
+                }
+         }
+
+         void bfs(int start){
+             boolean[] visited = new boolean[graph.length];
+             Queue<Integer> queue = new LinkedList<>();
+
+             visited[start] = true;
+             queue.offer(start);
+
+             while (!queue.isEmpty()){
+                 int vertex = queue.poll();
+                 System.out.print(vertex + " ");
+
+                 for(int i = 0; i < graph.length; i++){
+
+                     if(graph[vertex][i] == 1 && !visited[i]){
+                         visited[i] = true;
+                         queue.offer(i);
+                     }
+                 }
+             }
+         }
+
 
 
         public static void main(String[] args){
@@ -35,5 +70,7 @@ public class GraphAM {
                 g.addEdge(0,1);
                 g.addEdge(0,2);
                 g.display();
+
+                boolean[] visited = new boolean[g.graph.length];
         }
 }
