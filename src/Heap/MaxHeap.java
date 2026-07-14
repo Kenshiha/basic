@@ -64,6 +64,10 @@ public class MaxHeap {
         if(size <= 0){
             return;
         }
+        for(int i = (size/2) - 1; i >= 0; i--){
+            heapifyDown(heap,size,i);
+        }
+
         while (size != 0) {
             swap(heap,0,size - 1 );
             size--;
