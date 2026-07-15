@@ -14,10 +14,13 @@ public class Trie {
     }
 
     Trie(){
+
         root = new TrieNode();
+
     }
 
     void insert(String word){
+
         TrieNode current = root;
 
         for(int i = 0;i < word.length(); i++){
