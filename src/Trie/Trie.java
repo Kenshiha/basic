@@ -14,9 +14,7 @@ public class Trie {
     }
 
     Trie(){
-
         root = new TrieNode();
-
     }
 
     void insert(String word){
