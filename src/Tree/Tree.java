@@ -88,6 +88,9 @@ public class Tree {
         myTree.preOrder(root);
         myTree.postOrder(root);
 
+        int[] arr = {1,2,3,4,5,6,7,8,9};
+        int ans = myTree.bst(arr,9);
+        System.out.println(ans);
 
     }
 }
