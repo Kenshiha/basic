@@ -57,6 +57,23 @@ public class Tree {
         postOrder(root.right);
         System.out.print(root.val + " ");
     }
+    public int bst(int[] arr,int target){
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left <= right){
+            int m = left + (right - left) / 2;
+
+            if(arr[m] == target){
+                return m;
+            } else if (arr[m] < target) {
+                right = m+1;
+            }else{
+                left = m - 1;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args){
 
