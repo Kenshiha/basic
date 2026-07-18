@@ -22,7 +22,7 @@ public class Tree {
         size = 0;
         loop= 1;
     }
-    public void inorder(TreeNode root){
+    public void inorder(TreeNode root){              // left -> root -> right
 
         if(root == null){
             return;
@@ -36,7 +36,7 @@ public class Tree {
         //System.out.println();
     }
 
-    public void preOrder(TreeNode root){
+    public void preOrder(TreeNode root){          //root -> left -> right
 
         if(root == null){
             return;
@@ -48,7 +48,7 @@ public class Tree {
        // System.out.println();
     }
 
-    public  void postOrder(TreeNode root){
+    public  void postOrder(TreeNode root){          // left -> right -> root
         if(root == null){
             return;
         }
@@ -67,9 +67,9 @@ public class Tree {
             if(arr[m] == target){
                 return m;
             } else if (arr[m] < target) {
-                right = m+1;
+                left = m+1;
             }else{
-                left = m - 1;
+                right = m - 1;
             }
         }
         return -1;
@@ -83,6 +83,8 @@ public class Tree {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
 
         myTree.inorder(root);
         myTree.preOrder(root);
