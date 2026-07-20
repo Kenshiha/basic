@@ -2,7 +2,6 @@ package Algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 
@@ -30,7 +29,7 @@ class Graph{
      void addEdge(int src, int dest, int weight){
          adjlst.get(src).add(new Edge(dest,weight));
      }
-     void removeEdge(int src, int dest, int weigth){
+     void removeEdge(int src, int dest, int weight){
          adjlst.get(src).removeIf(edge -> edge.dest == dest);
      }
  }
@@ -85,11 +84,23 @@ public class Dijktras {
                 }
             }
         }
+
+        for(int i = 0; i < n; i++){
+            System.out.println("0 -> " + i + " = " + dist[i]);
+        }
     }
-
-
 
     public static void main(String[] args){
 
+        Graph g = new Graph(6);
+
+        g.addEdge(0,1,7);
+        g.addEdge(0,2,4);
+        g.addEdge(1,4,9);
+        g.addEdge(2,3,6);
+        g.addEdge(3,5,2);
+        g.addEdge(4,5,5);
+
+        dijktras(g,0);
     }
 }
