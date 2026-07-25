@@ -62,10 +62,10 @@ class Disjointset{
 }
 
 public class Kruskal {
-        static void Kruskal(Graph graph, int verices){
+        static void Kruskal(Graph graph, int vertices){
 
             Collections.sort(graph.edges);
-            Disjointset ds = new Disjointset(verices);
+            Disjointset ds = new Disjointset(vertices);
             int totalWeight = 0;
 
             for(Edge edge : graph.edges){
