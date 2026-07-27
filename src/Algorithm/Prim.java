@@ -45,5 +45,14 @@ public class Prim {
 
     public static void main(String[] args){
 
+        Graph g = new Graph(6);
+
+        g.addEdge(0,1,7);
+        g.addEdge(0,2,4);
+        g.addEdge(1,4,9);
+        g.addEdge(2,3,6);
+        g.addEdge(3,5,2);
+        g.addEdge(4,5,5);
+
     }
 }
