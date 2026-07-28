@@ -56,5 +56,6 @@ public class Prim {
 
         prim(g);
 
+
     }
 }
