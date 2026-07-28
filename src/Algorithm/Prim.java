@@ -54,5 +54,7 @@ public class Prim {
         g.addEdge(3,5,2);
         g.addEdge(4,5,5);
 
+        prim(g);
+
     }
 }
