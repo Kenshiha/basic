@@ -13,7 +13,7 @@ public class ReverseLinkedList {
             this.next = next;
         }
     }
-
+// Reverse Linked List
     public static Node reverse(Node head){
 
         if(head == null || head.next == null){

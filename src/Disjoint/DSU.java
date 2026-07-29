@@ -26,5 +26,9 @@ public class DSU {
 
     public static void main(String[] args){
 
+            DSU set = new DSU(5);
+
+            set.union(0,1);
+            set.union(2,3);
     }
 }
