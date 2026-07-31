@@ -81,6 +81,7 @@ public class Dijktras {
                 if(dist[u] + weight < dist[v]){
                     dist[v] = dist[u] + weight;
                     pq.add(new Pair(v, dist[v]));
+
                 }
             }
         }
