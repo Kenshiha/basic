@@ -118,6 +118,8 @@ public class MaxHeap {
             myHeap.insert(30);
             myHeap.insert(40);
             myHeap.insert(50);
+            myHeap.insert(60);
+            myHeap.insert(70);
             myHeap.display();
     }
 }
