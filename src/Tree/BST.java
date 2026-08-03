@@ -147,6 +147,7 @@ public class BST {
     public boolean isBalanced(){
             return isBalanced(root);
     }
+
     private boolean isBalanced(TreeNode node){
         if(node == null){
             return true;
