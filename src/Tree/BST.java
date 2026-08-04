@@ -177,6 +177,7 @@ public class BST {
         myTree.delete(15);
         myTree.display(myTree.root);
         System.out.println();
+        myTree.isBalanced();
         System.out.println(myTree.height());
         System.out.println(search(15));
         System.out.println(myTree.count());
