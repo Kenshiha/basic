@@ -78,7 +78,6 @@ public class Kruskal {
 
     }
 
-
         public static void main(String[] args){
             Graph g = new Graph();
 
@@ -86,8 +85,8 @@ public class Kruskal {
             g.addEdge(2,3,3);
             g.addEdge(1,2,4);
             g.addEdge(0,3,5);
-
-            kruskal(g,4);
+            g.addEdge(2,4,2);
+            kruskal(g,5);
 
         }
 }
