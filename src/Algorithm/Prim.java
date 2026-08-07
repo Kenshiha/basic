@@ -38,6 +38,8 @@ public class Prim {
                     key[v] = weight;
                     parent[v] = u;
                     pq.add(new Pair(v, key[v]));
+
+
                 }
             }
         }
