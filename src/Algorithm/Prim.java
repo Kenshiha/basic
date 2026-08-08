@@ -40,6 +40,8 @@ public class Prim {
                     pq.add(new Pair(v, key[v]));
 
 
+
+
                 }
             }
         }
