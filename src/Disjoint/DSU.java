@@ -1,20 +1,17 @@
 package Disjoint;
 
 public class DSU {
-
     int[] parent;
 
         DSU(int n){
             parent = new int[n];
         }
-
         int find(int x){
             if(parent[x]==x){
                 return x;
             }
             return find(parent[x]);
         }
-
         void union(int a, int b){
             int rootA = find(a);
             int rootB = find(b);
