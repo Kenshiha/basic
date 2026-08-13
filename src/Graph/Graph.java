@@ -55,10 +55,13 @@ public class Graph {
             int vertex = queue.poll();
             System.out.print(vertex + " ");
 
+
             for(int neighbor : graph.get(vertex)){
                 if(!visited[neighbor]){
+
                     visited[neighbor] = true;
                     queue.add(neighbor);
+
                 }
             }
         }

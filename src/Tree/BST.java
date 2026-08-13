@@ -120,6 +120,7 @@ public class BST {
     }
 
     public int findMin(){
+
         TreeNode curr = root;
 
         while(curr.left != null){
@@ -167,6 +168,7 @@ public class BST {
         BST myTree = new BST();
 
         myTree.insert(10);
+
         myTree.insert(5);
         myTree.insert(3);
         myTree.insert(15);
