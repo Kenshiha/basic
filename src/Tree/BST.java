@@ -121,6 +121,10 @@ public class BST {
 
     public int findMin(){
 
+
+
+
+
         TreeNode curr = root;
 
         while(curr.left != null){
