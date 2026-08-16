@@ -42,6 +42,7 @@ class Disjoint{
 
         int find(int x){
             if(parent[x] == x){
+
                 return x;
             }
             return find(parent[x]);
