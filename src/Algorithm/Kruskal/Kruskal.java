@@ -34,6 +34,7 @@ class Graph{
 }
 
 class Disjoint{
+
     int[] parent;
 
         Disjoint(int n){
@@ -42,6 +43,7 @@ class Disjoint{
 
         int find(int x){
             if(parent[x] == x){
+
 
                 return x;
             }
