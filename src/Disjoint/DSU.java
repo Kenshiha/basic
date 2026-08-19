@@ -7,7 +7,7 @@ public class DSU {
             parent = new int[n];
         }
         int find(int x){
-            if(parent[x]==x){
+            if(parent[x] == x){
                 return x;
             }
             return find(parent[x]);
