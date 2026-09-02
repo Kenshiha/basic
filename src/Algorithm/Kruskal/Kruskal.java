@@ -62,6 +62,7 @@ public class Kruskal {
     static void kruskal(Graph graph, int vertices){
 
         Collections.sort(graph.edges);
+
         Disjoint ds = new Disjoint(vertices);
         int totalWeight = 0;
 
