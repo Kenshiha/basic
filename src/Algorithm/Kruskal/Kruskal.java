@@ -39,6 +39,10 @@ class Disjoint{
 
         Disjoint(int n){
             parent = new int[n];
+
+            for(int i = 0; i < n; i++){
+                parent[i] = i;
+            }
         }
 
         int find(int x){
