@@ -7,8 +7,7 @@ public class DSU {
             parent = new int[n];
 
             for(int i = 0; i < n; i++){
-                parent[i] = i;
-            }
+                parent[i] = i;            }
         }
         int find(int x){
             if(parent[x] == x){
@@ -30,5 +29,6 @@ public class DSU {
             DSU set = new DSU(5);
             set.union(0,1);
             set.union(2,3);
+            set.union(0,4);
     }
 }
