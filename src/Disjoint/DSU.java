@@ -12,17 +12,17 @@ public class DSU {
                 parent[i] = i;            }
         }
         int find(int x){
+
             if(parent[x] == x){
+
                 return x;
             }
+
             return find(parent[x]);
         }
         void union(int a, int b){
-
             int rootA = find(a);
-
             int rootB = find(b);
-
             if(rootA != rootB){
                 parent[rootB] = rootA;
             }
