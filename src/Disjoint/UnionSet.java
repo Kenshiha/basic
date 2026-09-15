@@ -33,6 +33,7 @@ public class UnionSet {
         }else {
             parent[rootB] = rootA;
             rank[rootA]++;
+
         }
     }
 
