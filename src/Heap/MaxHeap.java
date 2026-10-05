@@ -97,8 +97,6 @@ public class MaxHeap {
                 int temp = heap[i];
                 heap[i] = heap[largest];
                 heap[largest] = temp;
-
-
                 //swap(heap,largest, i);
 
                 heapifyDown(heap, n, largest);
