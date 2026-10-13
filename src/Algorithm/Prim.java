@@ -35,13 +35,9 @@ public class Prim {
                 int weight = edge.weight;
 
                 if(!visited[v] && weight < key[v]){
-
                     key[v] = weight;
                     parent[v] = u;
                     pq.add(new Pair(v, key[v]));
-
-
-
 
                 }
             }
