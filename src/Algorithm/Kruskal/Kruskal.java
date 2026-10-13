@@ -36,9 +36,11 @@ class Graph{
 class Disjoint{
 
     int[] parent;
+    int[] rank;
 
         Disjoint(int n){
             parent = new int[n];
+            rank = new int[n];
 
             for(int i = 0; i < n; i++){
                 parent[i] = i;
@@ -46,10 +48,10 @@ class Disjoint{
         }
 
         int find(int x){
-            if(parent[x] == x){
-                return x;
+            if(parent[x] != x){
+                parent[x] = find(parent[x]);
             }
-            return find(parent[x]);
+            return parent[x];
         }
 
         void union(int a, int b){
