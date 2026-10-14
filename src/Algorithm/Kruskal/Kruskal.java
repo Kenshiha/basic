@@ -95,6 +95,7 @@ public class Kruskal {
             g.addEdge(1,2,4);
             g.addEdge(0,3,5);
             g.addEdge(2,4,2);
-            kruskal(g,5);
+            g.addEdge(3,4,5);
+            kruskal(g,6);
         }
 }
