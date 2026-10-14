@@ -41,9 +41,7 @@ public class Graph {
                 dfs(neighbor,visited);
             }
         }
-
     }
-
     void bfs(int start){
         boolean[] visited = new boolean[graph.size()];
         Queue<Integer> queue = new LinkedList<>();

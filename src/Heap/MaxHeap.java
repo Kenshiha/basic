@@ -1,5 +1,4 @@
 package Heap;
-
 //  Heap
 //  for left child      2 * i + 1
 //  for right child     2 * i + 2
@@ -121,6 +120,7 @@ public class MaxHeap {
             myHeap.insert(50);
             myHeap.insert(60);
             myHeap.insert(70);
+            myHeap.deleteMax();
             myHeap.display();
     }
 }
