@@ -30,6 +30,14 @@ public class MInHeap {
         }
     }
 
+    void heapifyDown(int[] heap, int i, int n){
+        int large = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+
+    }
+
     void swap(int[] heap, int i, int j){
         int temp = heap[i];
             heap[i] = heap[j];
