@@ -30,6 +30,11 @@ public class MInHeap {
         }
     }
 
+    void heapify(){
+        int i =0;
+        heapifyDown(heap,heap[i], size);
+    }
+
     void heapifyDown(int[] heap, int i, int n) {
         int largest = i;
         int left = 2 * i + 1;
