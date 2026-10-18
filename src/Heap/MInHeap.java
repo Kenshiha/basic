@@ -35,10 +35,10 @@ public class MInHeap {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
 
-        if (left < n && heap[left] > heap[largest]) {
+        if (left < n && heap[left] < heap[largest]) {
             largest = left;
         }
-        if (right < n && heap[right] > heap[largest]) {
+        if (right < n && heap[right] < heap[largest]) {
             largest = right;
         }
         if (largest != i) {
