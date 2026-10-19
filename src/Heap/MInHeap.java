@@ -36,24 +36,19 @@ public class MInHeap {
     }
 
     void heapifyDown(int[] heap, int i, int n) {
-        int largest = i;
+        int small = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
 
-        if (left < n && heap[left] < heap[largest]) {
-            largest = left;
+        if(left < n && heap[left] < heap[small]){
+            small = left;
         }
-        if (right < n && heap[right] < heap[largest]) {
-            largest = right;
+        if(right < n && heap[right] < heap[small]){
+            small = right;
         }
-        if (largest != i) {
-            int temp = heap[i];
-            heap[i] = heap[largest];
-            heap[largest] = temp;
-            //swap(heap,largest, i);
-
-            heapifyDown(heap, n, largest);
-
+        if(small != i){
+            swap(heap, i, small);
+            heapifyDown(heap,n,  small);
         }
     }
 
