@@ -50,7 +50,7 @@ public class Tree {
         System.out.print(root.val + " ");
         preOrder(root.left);
         preOrder(root.right);
-       // System.out.println();
+        System.out.println();
     }
 
     public  void postOrder(TreeNode root){          // left -> right -> root
