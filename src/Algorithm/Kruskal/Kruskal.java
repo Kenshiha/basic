@@ -61,6 +61,16 @@ class Disjoint{
             if(rootA != rootB){
                 parent[rootB] = rootA;
             }
+
+//            if(rank[rootA] > rank[rootB]){
+//                parent[rootB] = rootA;
+//            } else if (rank[rootA] < rank[rootB]) {
+//                parent[rootA] = rootB;
+//            }else {
+//                parent[rootB] = rootA;
+//                rank[rootA]++;
+//            }
+
         }
 }
 public class Kruskal {
@@ -68,8 +78,6 @@ public class Kruskal {
     static void kruskal(Graph graph, int vertices){
 
         Collections.sort(graph.edges);
-
-
         Disjoint ds = new Disjoint(vertices);
         int totalWeight = 0;
 
@@ -82,11 +90,8 @@ public class Kruskal {
                 System.out.println(edge.src + " " + edge.dest + " " + edge.weight);
             }
         }
-
         System.out.println("Total Weight = " + totalWeight);
-
     }
-
         public static void main(String[] args){
             Graph g = new Graph();
 
