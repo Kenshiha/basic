@@ -5,19 +5,20 @@ import java.util.ArrayList;
 public class Main {
 
   public static int BST(int[] arr,int target){
+
       int left = 0;
       int right = arr.length - 1;
 
       while(left <= right){
 
-          int m = left + (right - left) / 2;
+          int middle = left + (right - left) /2;
 
-          if(arr[m] == target){
-              return m;
-          } else if (arr[m] < target) {
-              left = m + 1;
+          if(arr[middle] == target){
+              return middle;
+          } else if (arr[middle] < target) {
+              left = middle + 1;
           }else {
-              right = m + 1;
+              right = middle - 1;
           }
       }
 
