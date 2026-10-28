@@ -29,7 +29,7 @@ public class Main {
         int[] nums = {1,2,3,4,5,6,7,8};
 
         int res = BST(nums,3);
-        System.out.println(res);
-        System.out.println(nums[res]);
+        System.out.println("index = " + res);
+        System.out.println("Value found = " + nums[res]);
     }
 }
