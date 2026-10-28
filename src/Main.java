@@ -30,5 +30,6 @@ public class Main {
 
         int res = BST(nums,3);
         System.out.println(res);
+        System.out.println(nums[res]);
     }
 }
