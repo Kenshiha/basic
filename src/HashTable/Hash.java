@@ -81,7 +81,9 @@ public class Hash {
         }
 
         public void display(){
-
+        for(int i = 0; i < table.length; i++) {
+            System.out.print(table[i] + " ");
+        }
     }
 
         public static void main(String[] args){
@@ -92,6 +94,7 @@ public class Hash {
             myMap.put("c",30);
             myMap.put("d",40);
             myMap.remove("c");
+            myMap.display();
             System.out.println(myMap.get("d"));
         }
 
