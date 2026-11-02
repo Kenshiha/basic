@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class linkedList {
   private Node head;
   private int size;
@@ -227,8 +230,6 @@ public class linkedList {
         System.out.println(list.size());
         System.out.println(list.get(0));
         System.out.println(list.isEmpty());
-
-
 
   }
 }
