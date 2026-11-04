@@ -1,7 +1,12 @@
-# basic
-# Dynamic Array in Java
+# Basics
+# Data Structure And ALgorithms
 
-Custom implementation of a dynamic array (similar to ArrayList).
+- Tree, Hash Table, Graph, Priority Queue, Trie.
+- Dijiktras, Prim and Kruskal algorithm.
+
+# Dynamic Array & Linked List in Java
+
+Custom implementation of a dynamic array & Linked List.
 
 ## Features
 - Dynamic resizing
@@ -10,4 +15,9 @@ Custom implementation of a dynamic array (similar to ArrayList).
 - Amortized O(1) insertion
 
 ## Purpose
-Built to understand how dynamic arrays work internally.
+Built to understand how dynamic arrays & Linked List work internally.
+
+# Stack & Queue 
+
+- Implementing stack & Queue using array and linked list. 
+- Managing LIFO & FIFO using poinnters.
