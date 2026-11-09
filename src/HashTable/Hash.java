@@ -77,16 +77,6 @@ public class Hash {
                 }
                 prev = temp;
                 temp = temp.next;
-//                if(temp.key.equals(key)){
-//                    if(prev == null){
-//                        table[index] = temp.next;
-//                    }else{
-//                        prev.next = temp.next;
-//                    }
-//                    return;
-//                }
-//                prev = temp;
-//                temp = temp.next;
 //
             }
         }
