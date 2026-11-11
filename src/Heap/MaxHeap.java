@@ -5,9 +5,9 @@ package Heap;
 // for parent           (i - 1) / 2
 
 public class MaxHeap {
-    int[] heap;
-    int size;
-    int capacity;
+    private int[] heap;
+    private int size;
+    private int capacity;
 
     MaxHeap(int capacity){
         this.capacity = capacity;

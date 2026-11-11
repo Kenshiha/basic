@@ -1,8 +1,8 @@
 package HashTable;
 
 public class Hash {
-        Node[] table;
-        int size;
+        private Node[] table;
+        private int size;
 
         class Node{
             String key;
@@ -58,8 +58,8 @@ public class Hash {
                 temp = temp.next;
             }
             return null;
-
         }
+
         void remove(String key){
             int index = getIndex(key);
             Node temp = table[index];
