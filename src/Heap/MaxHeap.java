@@ -2,7 +2,8 @@ package Heap;
 //  Heap
 //  for left child      2 * i + 1
 //  for right child     2 * i + 2
-// for parent           (i - 1) / 2
+//  for parent          (i - 1) / 2
+//  Last Leaf Node      (n / 2) - 1
 
 public class MaxHeap {
     private int[] heap;

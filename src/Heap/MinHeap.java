@@ -1,11 +1,11 @@
 package Heap;
 
-public class MInHeap {
+public class MinHeap {
     int[] heap;
     int size;
     int cap;
 
-    MInHeap(int cap){
+    MinHeap(int cap){
         heap = new int[cap];
         size = 0;
         this.cap = cap;
