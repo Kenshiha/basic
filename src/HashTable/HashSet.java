@@ -10,7 +10,6 @@ public class HashSet {
                 this.key = key;
             }
     }
-
     private Node[] set;
     private int size = 1009;
 
@@ -28,9 +27,7 @@ public class HashSet {
 
         public void add(int key){
             int index = hash(key);
-
             Node curr = set[index].next;
-
             while(curr != null){
                 if(curr.key == key){
                     return;
