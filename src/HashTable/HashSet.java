@@ -10,6 +10,7 @@ public class HashSet {
                 this.key = key;
             }
     }
+
     private Node[] set;
     private int size = 1009;
 
@@ -24,7 +25,6 @@ public class HashSet {
         private int hash(int key){
             return key % size;
         }
-
         public void add(int key){
             int index = hash(key);
             Node curr = set[index].next;
@@ -38,7 +38,6 @@ public class HashSet {
             Node newNode = new Node(key);
             newNode.next = set[index].next;
             set[index].next = newNode;
-
         }
 
         public boolean contain(int key){
